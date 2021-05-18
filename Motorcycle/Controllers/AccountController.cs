@@ -108,7 +108,7 @@ namespace Motorcycle.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Index", "Home");
         }
 
         private async Task Authenticate(UserModel user)

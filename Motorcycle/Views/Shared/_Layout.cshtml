@@ -6,7 +6,8 @@
     <title>@ViewData["Title"] - Motorcycle</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    
+    <link rel="stylesheet" href="~/css/ImageSlider.css" />
+
 </head>
 <body>
     <header>
@@ -17,12 +18,35 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">О туре</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Мой железный конь</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Галерея мотоцикла моего короче</a>
+
+
+                @{if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("user"))
+                        {<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Личный кабинет</a>}
+                        
+                        else if (User.IsInRole("admin"))
+                        { <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Личный кабинет админа</a>}
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Выйти</a>
+                    }
+                    else
+                    {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Регнуть</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Войти</a>   
+                    }
+                }
+
+
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                 
+
                 </div>
             </div>
         </nav>
-        <div class="ErrorsMessage" asp-validation-summary="All" ></div>
+        <div class="ErrorsMessage" asp-validation-summary="All"></div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
