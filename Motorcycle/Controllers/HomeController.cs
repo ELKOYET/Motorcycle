@@ -13,9 +13,14 @@ namespace Motorcycle.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private UserModel _User { get { return _context.Users.FirstOrDefault(u => u.Login == User.Identity.Name); } }
+
+        private ApplicationContext _context;
+
+        public HomeController(ILogger<HomeController> logger, ApplicationContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -43,6 +48,26 @@ namespace Motorcycle.Controllers
         public IActionResult About_Tour()
         {
             return View();
+        }
+
+        public IActionResult My_Experience()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Forum()
+        {
+            return View(_context.Messages.ToArray());
+        }
+
+
+        [HttpPost]
+        public IActionResult Forum(string InputedMsg)
+        {
+            _context.Messages.Add(new Message { messageText = InputedMsg, Departure = DateTime.Now, Sender = _User });
+            _context.SaveChanges();
+            return View(_context.Messages.ToArray());
         }
 
 

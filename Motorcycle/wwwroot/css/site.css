@@ -5,16 +5,16 @@ a.navbar-brand {
     white-space: normal;
     word-break: break-all;
     margin: 0 0 0 30px;
- 
 }
 
 body {
-/*    position: relative;*/
+    /*    position: relative;*/
     background-color: #444;
 }
 
 .custom-container {
     margin: 0 auto;
+    padding-bottom: 60px;
     width: 1080px;
     background-color: rgba(255,255,255,0.7);
     backdrop-filter: blur(3px);
@@ -32,66 +32,72 @@ a {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    background-color:antiquewhite;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
+
 .ErrorsMessage {
     background: transparent;
     width: 0%;
@@ -100,6 +106,7 @@ body {
     font-size: 12px;
     left: 0%;
 }
+
 .Shapka {
     white-space: normal;
     text-align: center;
@@ -108,8 +115,8 @@ body {
     position: relative;
     top: 50px;
     left: 50px;
-
 }
+
 .bg {
     position: absolute;
     width: 100vw;
@@ -118,8 +125,56 @@ body {
     transition: all .05s ease;
 }
 
-    .bg img {
-        backdrop-filter: brightness(100px);
-        width: 100%;
-        height: 100%;
-    }
+.bg img {
+    backdrop-filter: brightness(100px);
+    width: 100%;
+    height: 100%;
+}
+
+
+.leftcol {
+    float: left;
+    width: 350px;
+}
+
+.rightcol {
+    padding-left: 350px;
+}
+
+.rightcol .content {
+    border-left: 1px solid #ff9900;
+}
+
+
+.ErrorsMessage {
+    background: transparent;
+    width: 0%;
+    position: fixed;
+    bottom: 100%;
+    font-size: 12px;
+    left: 0%;
+}
+
+.Chat {
+    overflow-y:auto;
+    position: static;
+    left: 0;
+    bottom: 60px;
+    background: #a87575;
+    margin-left:5%;
+    width: 90%;
+    max-height: 600px;
+}
+
+.ChatItem {
+    margin:10px 0 10px 0;
+    background: #97b081;
+}
+
+.MsgInput {
+    display: inline;
+    position: sticky;
+    bottom: 0;
+    display:flex;
+
+}

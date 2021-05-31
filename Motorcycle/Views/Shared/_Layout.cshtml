@@ -10,8 +10,7 @@
 </head>
 <body>
     <div class="bg">
-    <img src="~/Images/bg60temniy.jpg" alt="Alternate Text" />
-
+        <img src="~/Images/bg60temniy.jpg" alt="Alternate Text" />
     </div>
 
     <header class="custom-header">
@@ -23,24 +22,25 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About_Tour">О туре</a>
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Мой опыт</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="My_Experience">Мой опыт</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About_Motorcycle">Галерея моего мотоцикла</a>
-
 
 
                 @if (User.Identity.IsAuthenticated)
                 {
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Forum">Форум</a>
+
                     if (User.IsInRole("user"))
                     {<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Личный кабинет</a>}
 
                     else if (User.IsInRole("admin"))
                     { <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Личный кабинет</a>}
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Выйти</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Logout">Выйти</a>
                 }
                 else
                 {
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Регнуть</a>
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Войти</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Register">Регнуть</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Login">Войти</a>
                 }
 
 
@@ -54,9 +54,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer">
         <div class="container">
-            &copy; 2021 - Motorcycle - путешествиия это круто (с) Батя Егора
+            &copy; 2021 - Motorcycle - Путешествиия это круто!
         </div>
     </footer>
 
@@ -64,13 +64,13 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-<script>
-    const img = document.querySelector('.bg');
-    document.addEventListener('scroll', () => {
-        const scroll = window.pageYOffset;
-        console.log(img)
-        img.style.transform = `translateY(${scroll / 5}px)`     
-    })
-</script>
+    <script>
+        const img = document.querySelector('.bg');
+        document.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            console.log(img)
+            img.style.transform = `translateY(${scroll / 5}px)`
+        })
+    </script>
 </body>
 </html>

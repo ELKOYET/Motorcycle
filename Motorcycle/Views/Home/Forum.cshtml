@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Message>
+
+<form asp-action="Forum" asp-controller="Home" method="post">
+    <div style=" padding-top: 50px; ">
+        <div id="Chat" class="Chat">
+            @foreach (var msg in Model)
+            {
+                <div class="ChatItem" style="min-height:100px">
+                    <p> @(msg.Sender.Name+ " "+ msg.Sender.Surname + " - " + msg.Departure.ToShortDateString())</p>
+                    <p>@msg.messageText</p>
+                </div>
+            }
+
+            <div class="MsgInput">
+                <input style="width:100%" type="text" name="InputedMsg" value="" placeholder="Введите сообщение..." />
+                <button  type="submit">Отправить</button>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+<script>
+    let chat = document.getElementById("Chat");
+    chat.scrollTop = chat.scrollHeight;
+
+</script>
