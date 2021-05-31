@@ -1,6 +1,15 @@
+<<<<<<< MotorCycle/SecondBranch
 ﻿
 .slider {
 	width: 576px; /*Same as width of the large image*/
+=======
+﻿/*Time for the CSS*/
+
+
+
+.slider{
+	width: 640px; /*Same as width of the large image*/
+>>>>>>> local
 	position: relative;
 	/*Instead of height we will use padding*/
 	padding-top: 432px; /*That helps bring the labels down*/
