@@ -33,5 +33,19 @@ namespace Motorcycle.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        public IActionResult About_Motorcycle()
+        {
+            return View();
+        }
+
+        public IActionResult About_Tour()
+        {
+            return View();
+        }
+
+
+
     }
 }
