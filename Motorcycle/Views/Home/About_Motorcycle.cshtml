@@ -2,48 +2,51 @@
     ViewData["Title"] = "О мотике";
 }
 
+<br />
+<br />
+<div class="slider">
+    <input type="radio" name="slide_switch" id="id1" />
+    <label for="id1">
+        <img src="~/Images/о мотике/1.jpeg" width="100" />
+    </label>
+    <img src="~/Images/о мотике/2.jpeg" width="640" height="320" />
+
+    <!--Lets show the second image by default on page load-->
+    <input type="radio" name="slide_switch" id="id2" checked="checked" />
+    <label for="id2">
+        <img src="~/Images/о мотике/2.jpeg" width="100" />
+    </label>
+    <img src="~/Images/о мотике/2.jpeg" width="640" height="320" />
+
+    <input type="radio" name="slide_switch" id="id3" />
+    <label for="id3">
+        <img src="~/Images/о мотике/2.jpeg" width="100" />
+    </label>
+    <img src="~/Images/о мотике/2.jpeg" width="640" height="320" />
+
+    <input type="radio" name="slide_switch" id="id4" />
+    <label for="id4">
+        <img src="~/Images/о мотике/2.jpeg" width="100" />
+    </label>
+    <img src="~/Images/о мотике/2.jpeg" width="640" height="320" />
+
+    <input type="radio" name="slide_switch" id="id5" />
+    
 
 
-<div class="text-center">
-    <div class="slider">
-        <input type="radio" name="slide_switch" id="id1" /> @*Выбранная по дефолту*@
-        <label for="id1">
-            <img src="~/Images/о мотике/1.jpeg" width="100" />
-        </label>
-        <img src="~/Images/о мотике/1.jpeg" width="576" height="432" />
 
-        <input type="radio" name="slide_switch" id="id2" />
-        <label for="id2">
-            <img src="~/Images/о мотике/2.jpeg" width="100" />
-        </label>
-        <img src="~/Images/о мотике/2.jpeg" width="576" height="432" />
-
-        <input type="radio" name="slide_switch" id="id3" />
-        <label for="id3">
-            <img src="~/Images/о мотике/3.jpeg" width="100" />
-        </label>
-        <img src="~/Images/о мотике/3.jpeg" width="576" height="432" />
-
-        <input type="radio" name="slide_switch" id="id4" />
-        <label for="id4">
-            <img src="~/Images/о мотике/4.jpeg" width="100" />
-        </label>
-        <img src="~/Images/о мотике/4.jpeg" width="576" height="432" />
-
-    </div>
-</div>
 
 
 @* TEXT *@
 <div>
     <div id="1" name="enableble" class="text-left">
-        <label>
+        <p>
             В 1998 году Honda выводит на внутренний рынок достаточно уникальный байк CL400.
             Эта модель продолжает оригинальные традиции мотоциклов 70-х годов.
             В основе Honda CL400 лежит классическая конструкция.
             Мотоцикл получил стильный ретро-дизайн, при этом является непростым "дорожником".
             Увеличенный клиренс, высокопрофильные шины с глубоким рисунком протектора ставят Honda CL400 в один ряд с представителями мотокасты эндуро.
-        </label>
+        </p>
     </div>
 
     <div id="2" hidden="hidden" name="enableble" class="text-left">
