@@ -25,8 +25,10 @@ namespace Motorcycle
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            string connection = @"Server=(localdb)\mssqllocaldb;Database=MotorcycleDB;Trusted_Connection=True;";
+        {            
+            string connection = @"workstation id=MotorcycleDB.mssql.somee.com;packet size=4096;user id=ELKOYET_SQLLogin_1;pwd=qziilvun65;data source=MotorcycleDB.mssql.somee.com;persist security info=False;initial catalog=MotorcycleDB";
+
+            //string connection = @"Server=(localdb)\mssqllocaldb;Database=MotorcycleDB;Trusted_Connection=True;";
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection).UseLazyLoadingProxies());
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -63,7 +65,7 @@ namespace Motorcycle
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=About_Tour}/{id?}");
             });
         }
     }
