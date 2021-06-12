@@ -10,13 +10,16 @@ a.navbar-brand {
 body {
     /*    position: relative;*/
     background-color: #444;
+    overflow-x: hidden;
 }
 
+
+
 .custom-container {
-    margin: 0 auto;
-    padding-bottom: 60px;
+    margin: 10px auto;
+    padding-bottom: 10px;
     width: 1080px;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(3px);
 }
 
@@ -89,7 +92,7 @@ body {
 }
 
 .footer {
-    background-color:antiquewhite;
+    background-color: antiquewhite;
     position: absolute;
     bottom: 0;
 
@@ -125,12 +128,11 @@ body {
     transition: all .05s ease;
 }
 
-    .bg img {
-        backdrop-filter: brightness(100px);
-        width: 100%;
-        height: 100%;
-        background: center center  no-repeat fixed;
-    }
+.bg img {
+    width: 100%;
+    height: 100%;
+    background: center center no-repeat fixed;
+}
 
 
 .leftcol {
@@ -158,19 +160,19 @@ body {
 }
 
 .Chat {
-    overflow-y:auto;
+    overflow-y: auto;
     position: static;
     left: 0;
     bottom: 60px;
     background: #dbb9b9;
-    margin-left:5%;
+    margin-left: 5%;
     width: 90%;
     max-height: 600px;
 }
 
 .ChatItem {
-    margin:10px 0 10px 0;
-    background: #c9e4f5 !important ;
+    margin: 10px 0 10px 0;
+    background: #c9e4f5 !important;
 
 }
 
@@ -178,14 +180,14 @@ body {
     display: inline;
     position: sticky;
     bottom: 0;
-    display:flex;
+    display: flex;
 
 }
 
 @font-face {
     font-family: "Montserrat-Regular";
     font-display: swap;
-    src: url("/fonts/Montserrat-Regular.woff") format('woff');
+    /*src: url("/fonts/Montserrat-Regular.woff") format('woff');*/
     font-weight: 400;
     font-style: normal;
 }
@@ -206,6 +208,7 @@ body {
     display: block;
     margin: 0 auto 16px auto;
 }
+
 .btnforum {
     display: inline-block;
     border: 1px solid #c9ae34;
@@ -218,21 +221,91 @@ body {
     height: auto;
     font-size: 16px;
     padding: 10px 40px;
-    box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
-    -moz-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
-    -webkit-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+    box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px 0 #D4D4D4;
+    -moz-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px 0 #D4D4D4;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d, 0 2px 4px 0 #D4D4D4;
     text-shadow: 0 1px 0 #fff;
     background-image: linear-gradient(to top, #fce374, #fcdf5b);
     background-color: #fce374;
 }
 
-    .btnforum:hover, .btnforum:active {
-        border: 1px solid #967d09;
-        color: #705D07;
-        box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
-        -moz-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
-        -webkit-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
-        background-color: #fcdf5b;
+.btnforum:hover, .btnforum:active {
+    border: 1px solid #967d09;
+    color: #705D07;
+    box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d;
+    -moz-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff6ce, inset 0 -1px 0 0 #e3c852, inset 0 0 0 1px #fce88d;
+    background-color: #fcdf5b;
+}
+
+.adapt-header-icons {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .adapt-header {
+        display: none;
     }
 
+    .adapt-header-icons {
+        display: block !important;
+    }
+}
 
+.header-ico {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 95% !important;
+    }
+
+    .tour__content-img {
+        background-position: center;
+        background-size: contain;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+
+    .slider {
+        width: 100% !important;
+    }
+
+    .img-phone {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.img-experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-experience-container img {
+    min-width: 400px;
+    width: 514px;
+    height: 380px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 95% !important;
+        line-height: 15px;
+    }
+
+    .tour__content-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+
+}

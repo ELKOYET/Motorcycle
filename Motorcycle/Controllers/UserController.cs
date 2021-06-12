@@ -28,18 +28,18 @@ namespace Motorcycle.Controllers
             return View(_User);
         }
  //Settings
-        #region Settings
-        [HttpGet]
-        public IActionResult Settings()
-        {
-            
-            return View();
-        }
+        // #region Settings
+        // [HttpGet]
+        // public IActionResult Settings()
+        // {
+        //     
+        //     return View();
+        // }
 
        
       
 
-        #endregion Settings
+       // #endregion Settings
     }
 }
 
