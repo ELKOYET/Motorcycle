@@ -66,7 +66,7 @@ namespace Motorcycle.Controllers
                     await Authenticate(user); // аутентификация
 
                     if (user.Role.Name == "admin") return RedirectToAction("AdminPanel", "Admin");
-                    else if (user.Role.Name != "admin") return RedirectToAction("User", "User");
+                    else if (user.Role.Name != "admin") return RedirectToAction("UserPanel", "User");
                 }
                 else
                     ModelState.AddModelError("", "Некорректные логин и(или) пароль");

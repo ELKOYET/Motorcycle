@@ -125,11 +125,12 @@ body {
     transition: all .05s ease;
 }
 
-.bg img {
-    backdrop-filter: brightness(100px);
-    width: 100%;
-    height: 100%;
-}
+    .bg img {
+        backdrop-filter: brightness(100px);
+        width: 100%;
+        height: 100%;
+        background: center center  no-repeat fixed;
+    }
 
 
 .leftcol {
@@ -233,4 +234,5 @@ body {
         -webkit-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
         background-color: #fcdf5b;
     }
+
 

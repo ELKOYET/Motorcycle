@@ -1,22 +1,12 @@
 ﻿@model UserModel
 <div>
-    @Model.Role.Name
-</div>
+    <h1 class="text-center">
+        Добро пожаловать, дорогой @Model.Name !
+        <div class="text-center" style="font-size: 22px">
+            Приветстую Вас на сайте "Путешествие на мотоцикле Honda CL400"
+            Здесь вы можете прочитать историю моего тура, а так же особенности моего железного коня
+            После ознакомления вы можете обсудить материал в разделе "Форум"
+        </div>
 
-<div>
-    <h1>
-        Мой профиль
     </h1>
-    <h2>
-        @Model.Login
-    </h2>
 </div>
-    
-
-<a>
-   
-    Ваше имя
-   @Model.Name
-    @Model.Surname
-
-</a>
