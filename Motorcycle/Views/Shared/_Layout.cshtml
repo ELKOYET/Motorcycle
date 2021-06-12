@@ -1,67 +1,78 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - Motorcycle</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/ImageSlider.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" href="~/css/ImageSlider.css"/>
 </head>
 <body >
-    <div class="bg">
-        <img src="~/Images/bg60temniy.jpg" alt="Alternate Text" />
-    </div>
+<div class="bg">
+    <img src="~/Images/bg60temniy.jpg" alt="Alternate Text"/>
+</div>
 
-    <header class="custom-header">
-        <nav class="custom-header navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Motorcycle</a>*@
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<header class="custom-header">
+    <nav class="custom-header navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Motorcycle</a>*@
+            <div class="adapt-header">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About_Tour">О туре</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="My_Experience">Мой опыт</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About_Motorcycle">Галерея моего мотоцикла</a>
+            </div>
 
+            <div class="adapt-header-icons">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About_Tour"><img width="35" height="35" src="~/Images/icons/delivery.svg"></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="My_Experience"><img width="35" height="35" src="~/Images/icons/star.svg"></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About_Motorcycle"><img width="35" height="35" src="~/Images/icons/motocross.svg" alt=""></a>
+            </div>
 
-                @if (User.Identity.IsAuthenticated)
-                {
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="adapt-header">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Forum">Форум</a>
-
-
-
-
                     <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Logout">Выйти</a>
-                }
-                else
-                {
+                </div>
+                <div class="adapt-header-icons">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Forum">Фор</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Logout"><img style="transform: rotate(180deg)" width="35" height="35" src="~/Images/icons/sign-in.svg"></a>
+                </div>
+            }
+            else
+            {
+                <div class="adapt-header">
                     <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>
                     <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Login">Войти</a>
-                }
+                </div>
+                <div class="adapt-header-icons">
+                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Register"><img width="35" height="35" src="~/Images/icons/website.svg"></a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Login"><img width="35" height="35" src="~/Images/icons/sign-in.svg"></a>
+                </div>
+            }
 
 
-            </div>
-        </nav>
-        <div class="ErrorsMessage" asp-validation-summary="All"></div>
-    </header>
-    <div class="container custom-container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer custom-header">
-        <div class="container" style="color: white">
-            &copy; 2021   - Путешествиия это круто!
         </div>
-    </footer>
+    </nav>
+    <div class="ErrorsMessage" asp-validation-summary="All"></div>
+</header>
+<div class="container custom-container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+<footer class="border-top footer custom-header">
+    <div class="container" style="color: white">
+        &copy; 2021 - Путешествиия это круто!
+    </div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
 
 </body>
 </html>
