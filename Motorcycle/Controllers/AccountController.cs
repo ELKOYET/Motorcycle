@@ -22,14 +22,15 @@ namespace Motorcycle.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-         
-          
-          
-            
+
+
+
+
             return View();
         }
 
         [HttpPost]
+        
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterModel model)
         {
